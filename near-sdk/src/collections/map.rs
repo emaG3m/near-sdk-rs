@@ -11,7 +11,7 @@ const ERR_VALUE_DESERIALIZATION: &[u8] = b"Cannot deserialize value with Borsh";
 const ERR_VALUE_SERIALIZATION: &[u8] = b"Cannot serialize value with Borsh";
 
 /// An iterable implementation of a map that stores its content directly on the trie.
-#[derive(BorshSerialize, BorshDeserialize)]
+#[derive(BorshSerialize, BorshDeserialize, Debug)]
 pub struct Map<K, V> {
     key_index_prefix: Vec<u8>,
     keys: Vector<K>,

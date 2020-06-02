@@ -13,7 +13,7 @@ const ERR_INDEX_OUT_OF_BOUNDS: &[u8] = b"Index out of bounds";
 
 /// An iterable implementation of vector that stores its content on the trie.
 /// Uses the following map: index -> element.
-#[derive(BorshSerialize, BorshDeserialize)]
+#[derive(BorshSerialize, BorshDeserialize, Debug)]
 pub struct Vector<T> {
     len: u64,
     prefix: Vec<u8>,
